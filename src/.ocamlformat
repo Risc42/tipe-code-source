@@ -1,0 +1,4 @@
+profile = default
+margin = 80
+break-cases = nested
+field-space = loose
