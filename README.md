@@ -37,3 +37,14 @@ assez proche de l'autre.
 
 Pour compiler, rien de plus simple si on a déjà installé `ocamlc` et `make`.
 Sinon pour installer la toolchain _OCaml_ on peut suivre [ce tutoriel](https://ocaml.org/docs/installing-ocaml).
+Une fois chose faite il suffit de faire :
+
+- `make test`, pour compiler et exécuter les tests (à l'heure actuelle seulement
+  la partie mathématique)
+- `make krawczyk_algorithm`, pour compiler et exécuter l'algorithme de KRAWCZYK
+  sur un générateur de type BlumBlumShub
+- `make clean`, pour effacer tous les fichiers de compilation
+
+### 4. Conclusion
+
+Bonne découverte !

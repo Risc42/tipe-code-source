@@ -20,10 +20,7 @@ let d =
   fraction_matrix_of_int_matrix
     [| [| 0; -1; 2 |]; [| -4; 1; -5 |]; [| 1; 1; -1 |] |]
 
-let e = fraction_array_of_int_array [| 5; 0; -6 |];;
-
-Printf.printf "lalalal %d vaut \n" (denominateur_frac d.(2).(0));;
-
+let e = fraction_array_of_int_array [| 5; 0; -6 |]
 let y = pivot_de_gauss d e;;
 
 Printf.printf "num y.(0) %d\n" (numerateur_frac y.(0));;

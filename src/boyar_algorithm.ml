@@ -32,8 +32,8 @@ let prediction_process_step_2_boyar
   for i = 0 to Array.length y - 1 do
     if numerateur_frac e.(i).(i) = 0 then
       y.(i) <- divise_2_frac c.(i) (!supposed_m, 1)
-      (*else
-    if pgcd_fractions e.(i).(i) (!supposed_m, 1) = 1 then y.(i) <-*)
+      else
+    if pgcd_fractions e.(i).(i) (!supposed_m, 1) = 1 then y.(i) <-
   done;
   Hashtbl.add prev_elems_hashtable i (numerateur_frac ith_value);
   if

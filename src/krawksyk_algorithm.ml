@@ -82,7 +82,8 @@ let step_2_krawksyk (seeds : int array)
     prediction_process_step_2_krawczyk k_functions_array k_alpha_array
       prev_elems_hashtable column_lin_indep_matrix val_lin_indep_array m
       supposed_m !i;
-    Printf.printf "le m predit est : %d\n" !supposed_m
+    Printf.printf "Étape 2 - Le modulo prédit est : %d à l'itération %d\n"
+      !supposed_m !i
   done;
   !supposed_m
 
@@ -161,7 +162,8 @@ let step_1 (seeds : int array)
     prediction_process_step_1 k_functions_array k_alpha_array
       prev_elems_hashtable column_lin_indep_matrix val_lin_indep_array m
       supposed_m !i;
-    Printf.printf "le m predit est : %d\n" !supposed_m
+    Printf.printf "Étape 1 - Le modulo prédit est : %d à l'itération %d\n"
+      !supposed_m (!i - 1)
   done;
   step_2_krawksyk seeds k_functions_array k_alpha_array m supposed_m
 
@@ -217,7 +219,10 @@ let k_functions_array_test =
   |]
 
 let k_alpha_array_test = [| 1 |]
-let m = 272953
+let m = 272953;;
+
+Printf.printf "Le modulo à trouver pour l'algorithme BlumBlumShub est %d\n" m;;
+
 let supp_m = step_1 seed_test k_functions_array_test k_alpha_array_test m;;
 
-Printf.printf "Le m trouvé à la fin vaut %d\n" supp_m
+Printf.printf "Le modulo trouvé à la fin vaut %d\n" supp_m
