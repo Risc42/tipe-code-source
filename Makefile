@@ -7,7 +7,7 @@ prng:
 krawksyk:
 	ocamlc -c src/krawksyk_algorithm.ml
 	ocamlc -o src/krawksyk_algorithm src/maths_tools.cmo src/prng.cmo src/krawksyk_algorithm.cmo
-test:
+test: tools
 	ocamlc -c src/test_maths_tools.ml 
 	ocamlc -o test src/maths_tools.cmo src/test_maths_tools.cmo
 all :
